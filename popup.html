@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <title>Desk Buddy</title>
+  <style>
+    body {
+      font-family: "Segoe UI", sans-serif;
+      background-color: #fffbe6;
+      margin: 0;
+      padding: 16px;
+      width: 220px;
+      text-align: center;
+    }
+
+    h3 {
+      margin-top: 0;
+      font-size: 1.1rem;
+    }
+
+    .color-picker {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      margin-top: 12px;
+    }
+
+    .color-circle {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      cursor: pointer;
+      border: 2px solid transparent;
+    }
+
+    .color-circle:hover {
+      border: 2px solid #333;
+    }
+
+    #status {
+      margin-top: 10px;
+      font-size: 0.85rem;
+      color: #444;
+    }
+
+    #remove-buddy {
+      margin-top: 16px;
+      background-color: #ff4d4f;
+      color: white;
+      border: none;
+      padding: 8px 12px;
+      font-size: 0.9rem;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    #remove-buddy:hover {
+      background-color: #e04445;
+    }
+  </style>
+</head>
+<body>
+  <h3>Choose Your Buddy Color</h3>
+  <div class="color-picker">
+    <div class="color-circle" style="background-color: #ff8a80;" data-color="red"></div>
+    <div class="color-circle" style="background-color: #80d8ff;" data-color="blue"></div>
+    <div class="color-circle" style="background-color: #c3c4c2;" data-color="grey"></div>
+    <div class="color-circle" style="background-color: #683d1c;" data-color="brown"></div>
+  </div>
+  <div id="status"></div>
+
+  <button id="remove-buddy">Remove Buddy</button>
+
+  <script src="popup.js"></script>
+</body>
+</html>

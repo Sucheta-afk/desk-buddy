@@ -1,0 +1,33 @@
+{
+  "manifest_version": 3,
+  "name": "Desk Buddy",
+  "version": "3",
+  "description": "A cute little buddy that sits on your screen and keeps you company.",
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "buddy-red.png",
+      "48": "buddy-red.png",
+      "128": "buddy-red.png"
+    }
+  },
+  "permissions": ["storage", "scripting", "activeTab"],
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "css": ["style.css"]
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "buddy-brown.png",
+        "buddy-blue.png",
+        "buddy-red.png",
+        "buddy-grey.png"
+      ],
+      "matches": ["<all_urls>"]
+    }
+  ]
+}
